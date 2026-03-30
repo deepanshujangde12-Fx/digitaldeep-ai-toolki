@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Digital Deep AI Toolkit</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #a855f7;
+    }
+
+    p {
+      color: #cbd5f5;
+    }
+
+    input {
+      padding: 12px;
+      width: 300px;
+      border-radius: 8px;
+      border: none;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(45deg, #9333ea, #7e22ce);
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    #output {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #22c55e;
+      white-space: pre-line;
+    }
+
+    .box {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 15px;
+      display: inline-block;
+    }
+
+    @media(max-width:600px){
+      input {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1>🚀 Digital Deep AI Toolkit</h1>
+    <p>Generate marketing strategy using AI</p>
+
+    <input type="text" id="input" placeholder="Enter your niche">
+
+    <br><br>
+
+    <button onclick="generate()">Generate</button>
+
+    <br><br>
+
+    <button onclick="setText('SEO')">SEO</button>
+    <button onclick="setText('Instagram Growth')">Instagram</button>
+    <button onclick="setText('Ads')">Ads</button>
+
+    <p style="margin-top:20px; color:#aaa;">Powered by Digital Deep AI</p>
+
+    <p id="output"></p>
+  </div>
+
+<script>
+function setText(value){
+  document.getElementById("input").value = value;
+}
+
+function generate() {
+  let input = document.getElementById("input").value;
+  let output = document.getElementById("output");
+
+  if(input === ""){
+    output.innerHTML = "⚠️ Please enter a topic";
+    return;
+  }
+
+  output.innerText = "⏳ Generating...";
+
+  setTimeout(() => {
+    output.innerHTML = `
+🔥 AI Strategy for ${input}
+
+👉 Step 1: Define your target audience  
+👉 Step 2: Create engaging content  
+👉 Step 3: Use SEO keywords  
+👉 Step 4: Run targeted ads  
+
+💡 Tip: Consistency is the key to growth!
+    `;
+  }, 1000);
+}
+</script>
+
+</body>
+</html>
