@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Digital Deep AI Toolkit</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #a855f7;
+    }
+
+    p {
+      color: #cbd5f5;
+    }
+
+    input {
+      padding: 12px;
+      width: 300px;
+      border-radius: 8px;
+      border: none;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(45deg, #9333ea, #7e22ce);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    #output {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #22c55e;
+    }
+
+    .box {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 15px;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1>🚀 Digital Deep AI Toolkit</h1>
+    <p>Generate marketing content using AI</p>
+
+    <input type="text" id="input" placeholder="Enter your business niche">
+    <br>
+    <button onclick="generate()">Generate Content</button>
+
+    <p id="output"></p>
+  </div>
+
+  <script>
+    function generate() {
+      let input = document.getElementById("input").value;
+      document.getElementById("output").innerText = 
+      "🔥 AI Suggestion for " + input + ": Grow your brand with high-converting content!";
+    }
+  </script>
+
+</body>
+</html>
